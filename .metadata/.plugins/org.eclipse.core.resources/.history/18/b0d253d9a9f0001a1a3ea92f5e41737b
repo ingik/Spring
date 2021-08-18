@@ -1,0 +1,24 @@
+package com.mvc.updown;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mvc.updown.validate.UploadFile;
+
+@Controller
+public class HomeController {
+	@RequestMapping("/form")
+	public String uploadForm() {
+		return "upload";
+	}
+	
+	@RequestMapping("/upload")
+	public String fileUpload(HttpServletRequest request,Model model,UploadFile uploadFile, BindingResult result) {
+		
+		return null;
+	}
+}

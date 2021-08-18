@@ -1,0 +1,5 @@
+package com.mvc.updown.validate;
+
+public class FileValidator {
+
+}

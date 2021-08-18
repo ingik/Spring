@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="favoriteFood" name="favoriteFood" class="com.test02.Food">
+		<property name="name" value="고기"></property>
+		<property name="price" value="20000"></property>
+	</bean>
+	<bean id="unFavoriteFood" name="unFavoriteFood" class="com.test02.Food">
+		<constructor-arg value="오이"></constructor-arg>	
+		<constructor-arg value="10000"></constructor-arg>	
+	</bean>
+	
+	<bean id="myFood" class="com.test02.MyFood" autowire="byName"></bean>
+	<!-- 
+		byName : id/name이 setter와 같은 이름의 bean이 있으면 자동 할당
+		byType : setter의 parameter와 같은 type의 bean이 있으면 자동 할당
+		constructor : 생성자의 parameter와 같은 type의 bean이 있으면 자동 할당,
+			id나 name으로 호출
+	 -->	
+</beans>

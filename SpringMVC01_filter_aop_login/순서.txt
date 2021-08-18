@@ -1,0 +1,34 @@
+Spring MVC
+1.  pom.xml : ojdbc6(+repository), mybatis, mybatis-spring, commons-dbcp,spring-orm
+2. web.xml:applicationContext.xml, mapping encoding filter
+  SRC -> main-> webapp -> spring에서 하는것
+  appServlet안에 root-context.xml이랑 servlet-context같이 넣어주기
+  root-context -> applicationContext로 이름 바꾸기
+  
+ 3./WEB-INF/SPRING/SQLS/TEST.SQL
+
+4.dto,dao, biz, controller 
+Java Resource에서 src/main/.java여기에 만들기.
+5. src/main/resources/mybatis/board-mapper.xml
+6. /WEB-INF/spring/sqls/config.xml
+7. servlet-context,applicationContext
+
+_filter
+8. com/mvc/upgrade/common/filter/LogFilter(impl javax.servlet.Filter)
+9. web.xml : filter
+
+_aop
+	//dependency 추가
+10. pom.xml : aspectjweaver, aspectjrt
+11. com/mvc/upgrade/common/aop/LogAop
+12. WEB-INF/spring/appServlet/aop-context.xml
+13. web.xml : aop-contxt 추가(init-param)
+14. src/main/resources/log4j.xml(logger추가)
+
+_login
+15. pom.xml : jackson-core-asl, jackson-mapper-asl
+			 jackson : java object를 JSON으로 변환하거나 JSON을 java object로 변환하는데 필요한 라이브러리
+16. WEB-INF/spring/sql/test.spl
+17. dto, dao, biz, controller
+18. src/main/resources/mybatis/member-mapper.xml
+19. WEP-INF/spring/sqls/config.xml

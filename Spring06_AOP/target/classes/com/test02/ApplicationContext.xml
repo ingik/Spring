@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="man" class="com.test02.Man"></bean>
+	<bean id="woman" class="com.test02.Woman"></bean>
+
+	<!-- ccc: 공통 관심 사항 -->
+	<bean id="myAdvice" class="com.test02.MyAspect"></bean>
+	<!-- proxy 객체 생성 -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+	<!-- advisor(aspect) : advice + pointcut -->
+	<bean id="myAdvisor" 
+		class="org.springframework.aop.aspectj.AspectJExpressionPointcutAdvisor">
+		<property name="advice" ref="myAdvice"></property>	
+											<!-- 접근제한자 public 리턴타입 전부 메소드 전부(매개변수 전부) -->
+		<property name="expression" value="execution(public * *(..))"></property>
+	</bean>
+		<!-- execution(public * com.test02.Woman.classWork(..)) -->
+</beans>

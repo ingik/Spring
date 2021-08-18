@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.hello.mvc.model.Biz&apos; to &apos;HelloBiz&apos;&#x0D;&#x0A;- Original project: &apos;Spring07_HelloMVC&apos;&#x0D;&#x0A;- Original element: &apos;com.hello.mvc.model.Biz&apos;&#x0D;&#x0A;- Renamed element: &apos;com.hello.mvc.model.HelloBiz&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Biz&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.hello.mvc.model{Biz.java[Biz" matchStrategy="1" name="HelloBiz" qualified="false" references="true" similarDeclarations="false" stamp="1598501650243" textual="false" version="1.0"/>
+</session>
